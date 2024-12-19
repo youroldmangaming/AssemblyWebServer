@@ -24,3 +24,22 @@ This project implements a simple web server in ARM assembly language, designed t
    ```bash
    sudo apt update
    sudo apt install build-essential
+
+
+2. **Testing the Server
+You can test the server by sending HTTP requests to it. Use curl or a web browser to access the following URLs:
+
+For mom's response: http://<your_raspberry_pi_ip>:6969/urmom
+
+For dad's response: http://<your_raspberry_pi_ip>:6969/urdad
+
+For any other request, you will receive a "405 Method Not Allowed" message.
+
+3. **Code Structure
+
+webserver.s: The main assembly source file containing the web server logic.
+
+Responses: The server defines several HTTP responses for different URLs.
+
+Socket Handling: The server creates a TCP socket, binds it to a port, and listens for incoming connections.
+   
